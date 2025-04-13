@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CineTalkies</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      overflow-x: hidden;
+      background: url('https://i.imgur.com/E92VjZL.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      position: relative;
+    }
+
+    /* Dark overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      z-index: -1;
+    }
+
+    nav {
+      background-color: rgba(34, 34, 34, 0.95);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 2px solid #444;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 8px 16px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff4444;
+    }
+
+    .header {
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      color: #ff4444;
+      margin-top: 20px;
+      text-shadow: 2px 2px 10px #000;
+    }
+
+    .theater {
+      margin: 40px auto;
+      padding: 20px;
+      background: linear-gradient(to bottom, #550000, #111);
+      border: 10px solid #800000;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 960px;
+      box-shadow: 0 0 50px #800000;
+      position: relative;
+    }
+
+    .curtains {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: repeating-linear-gradient(
+        90deg,
+        #aa0000,
+        #aa0000 10px,
+        #990000 10px,
+        #990000 20px
+      );
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .screen {
+      position: relative;
+      padding-top: 56.25%;
+      background-color: #000;
+      border: 6px solid #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 30px #333;
+    }
+
+    .screen video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ffe4c4;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Now Showing</a>
+    <a href="#">Upcoming</a>
+    <a href="https://forms.gle/49pGwSupHxUsHwhB6" target="_blank">Contact</a>
+  </nav>
+
+  <div class="header">Western Style Shot Film by Kaneendran</div>
+
+  <div class="theater">
+    <div class="curtains"></div>
+    <div class="screen">
+      <video controls autoplay muted>
+        <source src="C:\Users\Kaneendran\Videos\A Kaneendran Shot Film-Western.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <h3>Thanks for Watching my Experimental Film 🎬<br>Got Queries or Reviews? Hit the Contact button above!</h3>
+
+</body>
+</html>
